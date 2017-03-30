@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jquery-2.1.4.js"></script>
+    <script src="jspdf.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <div id="navbar">
+        <span>
+                jsPDF -form filling
+            </span>
+    </div>
+    <div id="wrapper">
+        <input type="text" id="name" value="" / placeholder="Name"><br>
+        <input type="text" id="company" value="" / placeholder="Company"><br>
+        <input type="text" id="department" value="" / placeholder="Department"><br>
+        <input type="text" id="title" value="" / placeholder="Job TITLE"><br>
+        <input type="button" id="button" value="Submit" />
+
+        <script>
+            $('#button').click(function() {
+
+                var doc = new jsPDF();
+                var imgData = '';
+                doc.addImage(imgData, 'JPEG', 0, 0, 297);
+                DOC.SAVE('test.pdf');
+
+            });
+        </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>js Pdf</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="jspdf.min.js"></script>
+    <script type="text/javascript">
+        function genPDF() {
+            var doc = new jsPDF();
+
+            doc.text(20, 20, 'TEST message');
+            doc.addPage();
+            doc.text(20, 20, 'TEST PAGE 2');
+            doc.save('Test.pdf');
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <h1> jspdf demo</h1>
+    <a href="javascript:genPDF()"> DOWNLOAD pdf </a>
+
+</body>
+
+</html>
